@@ -28,12 +28,13 @@
                 }
                 
                 button {
-                    
                     width: 100%;
                     display: block;
                     background-color: variables.$buttonColor;
                     border: none;
+                    color: variables.$secondaryTextColor;
                     text-transform: uppercase;
+                    
                 }
             }
         }
