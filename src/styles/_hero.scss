@@ -25,6 +25,7 @@
 
                 img {
                     max-height: 60px;
+                    margin-bottom: 30px;
                 }
                 
                 button {
@@ -34,7 +35,9 @@
                     border: none;
                     color: variables.$secondaryTextColor;
                     text-transform: uppercase;
-                    
+                    height: 60px;
+                    border-radius: 3px;
+                    font-size: 18px;
                 }
             }
         }
