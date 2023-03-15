@@ -1,0 +1,48 @@
+@use 'variables';
+
+.shows {
+    padding: 2vw 5.6vw;
+
+    &__tabs {
+        color: variables.$secondaryTextColor;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+        
+
+        &__item {
+            list-style: none;
+            text-transform: uppercase;
+            margin-right: 16px;
+            cursor: pointer;
+            
+            &--selected {
+                border-bottom: 2px solid variables.$secondaryTextColor;
+            }
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 16px;
+
+        &--hide {
+            display: none;
+        }
+
+        &__item {
+            img {
+                max-width: 100%;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.03);
+                }
+            }
+        }
+    }
+}

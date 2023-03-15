@@ -44,6 +44,13 @@ module.exports = function(grunt) {
                 }]
             }
         },
+        uglify: {
+            my_target: {
+                files: {
+                    'dist/script/script.min.js' : ['src/script/script.js']
+                }
+            }
+        },
         watch: {
             css: {
                 files: 'src/styles/**/*.scss',
@@ -55,7 +62,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
     grunt.registerTask('default', ['sass:development','imagemin:development','watch']);
-    grunt.registerTask('build', ['sass:production','imagemin:production']);
+    grunt.registerTask('build', ['sass:production','imagemin:production','uglify']);
 }
